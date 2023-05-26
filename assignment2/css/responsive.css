@@ -4,4 +4,11 @@
 .cus-w{
   width:90%!important;   
 }
+.logo{
+  width: 100px;
+  height: 100px;
+}
+.findtext{
+font-size: 24px;
+}
 }
