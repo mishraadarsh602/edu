@@ -53,10 +53,15 @@ main,header,footer{
     padding: 27px 9px;
  }
  
-.form-floating>label {
+.form-floating label {
     background-color: transparent!important;
-    color: #ffff;
+    color: #ffff!important;
 }
+.form-floating>label::after{
+    background-color:transparent!important;
+  
+}
+  
 
 .form-floating input{
     color:#fff;

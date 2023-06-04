@@ -1,4 +1,7 @@
 @media (max-width:575px){
+  .main-container{
+    padding: 12px;
+  }
     main,header{
         padding:0 14px;
     }
@@ -6,6 +9,16 @@
     { padding-right: 1px;
     padding-left: 8px!important;
     color: transparent!important;
+}
+.select-box2 select
+{ 
+color: #fff!important;
+width: 127px;
+padding-left: 37px!important;
+}
+.select-box2  .tri {
+  
+    left: 96px;
 }
  .logo{
     width: 100px;
@@ -19,5 +32,10 @@ font-size: 1.14rem;
   .accordion-button:not(.collapsed)::after {
    transform:scale(.8) rotate(45deg)!important;
 }
-
+ h4{
+  font-size: calc(1.14rem + .3vw);
+}
+h5{
+  font-size: 1rem;
+}
 }
