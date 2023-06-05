@@ -39,3 +39,9 @@ h5{
   font-size: 1rem;
 }
 }
+
+@media (min-width:575px) and (max-width:768px){
+  .display-5{
+    font-size: calc(1rem + 2.1vw);
+  }
+}

@@ -1,6 +1,7 @@
 *{
     padding:0;
     margin:0;
+    /* font-family: sans-serif!important; */
 }
 
 body{
@@ -55,13 +56,15 @@ main,header,footer{
  
 .form-floating label {
     background-color: transparent!important;
-    color: #ffff!important;
+    color: #cdcbcb!important;
 }
 .form-floating>label::after{
     background-color:transparent!important;
   
 }
-  
+.lang-dark{
+    background-color:#0f1118!important;
+}  
 
 .form-floating input{
     color:#fff;
@@ -89,6 +92,7 @@ main,header,footer{
 .select-box select{
     padding-right: 25px;
     padding-left: 37px!important;
+    
 }
 .get-start button{
     padding:14px;
