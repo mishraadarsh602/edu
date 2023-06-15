@@ -1,0 +1,93 @@
+<script>
+
+    class restaurantManager {
+       //1.A
+        restaurentList = [{
+            name: "Indian Accent",
+            address: "The Lodhi, Lodhi Rd, CGO Complex, Pragati Vihar",
+            city: "New Delhi"
+        },
+        {
+            name: "Daryaganj Restaurant",
+            address: "317 B, 3rd Floor, Ambience Mall, National Highway-8, Haryana 122002",
+            city: "Gurugram"
+        },
+        {
+            name: "Saptami",
+            address: "B-5, Kajupada Pipeline Rd, near Holiday Inn Mumbai International Airport, an IHG Hotel, Satya Nagar, Mumbai, Maharashtra",
+            city: "Mumbai"
+        },
+        {
+            name: "The Waterfall Restaurant",
+            address: "T18, LV Prasad Rd, Thangal karai, Dhanalakshmi Colony, Vadapalani, Chennai Tamil Nadu 600026",
+            city: "Chennai"
+        },
+        {
+            name: "Mocambo Restaurant and Bar",
+            address: "Ground Floor, 25B, Mirza Ghalib St, Taltala, Kolkata,  West Bengal 700016",
+            city: "Kolkata,"
+        },
+        {
+            name: "Gam's Delicacy Restaurant",
+            address: "Krishna Market, GS Rd, GMC Ward Number 44, Ganeshguri, Guwahati, Assam 781006",
+            city: "Guwahati"
+        },
+        {
+            name: "Good Vibes Cafe",
+            address: "MIG-36, Shilpgram Rd, Taj Nagari Phase 1, Telipara, Tajganj, Agra, Uttar Pradesh 282001",
+            city: "Agra"
+        },
+        {
+            name: "Zaika Restaurant",
+            address: "Krishna Market, Sector 3, Extension, Trikuta Nagar, Jammu, Jammu and Kashmir 180020",
+            city: "Jammu"
+        },
+        {
+            name: "Himachali Rasoi",
+            address: "54, Mall Rd, Middle Bazar, The Mall, Shimla, Himachal Pradesh 171001",
+            city: "Himachal"
+        }, {
+            name: "Famous restaurant",
+            Address: "Neemkheda, Madhya Pradesh 464551",
+            city: "Neemkheda"
+        }
+        ]
+
+
+        //1.B
+        printAllRestaurantNames() {
+            console.log("List of available Restaurants are  :");
+            this.restaurentList.map((name, index) => {
+                console.log((index + 1) + ". " + name.name);
+
+            });
+        }
+
+        //1.C
+        filterRestaurantByCity(city) {
+            //console.log(typeof(city))
+            this.restaurentList.filter((restaurant) => {
+                if (restaurant.city === city) {
+                    console.log("Restaurant available in city - " + restaurant.city + " are : ");
+
+                    console.log("Name : " + restaurant.name);
+                    console.log("Address : " + restaurant.address);
+                    console.log("City : " + restaurant.city);
+
+
+                }
+
+            })
+
+
+        }
+
+
+    }
+
+    const obj = new restaurantManager();
+    obj.printAllRestaurantNames();
+    obj.filterRestaurantByCity("Chennai");
+
+
+</script>

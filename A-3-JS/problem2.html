@@ -1,0 +1,38 @@
+<script>
+
+let orderData = {
+'Below 500': 20,
+'500-1000': 29,
+'1000-1500': 30,
+'1500-2000': 44,
+'Above 2000': 76
+}; 
+
+//a. Calculate the total number of orders placed for the restaurant?. 
+let valOrderData = Object.values(orderData);
+let totalOrder =  valOrderData.reduce((a,b)=>a+b)
+
+console.log("Total number of orders placed = "+totalOrder);
+
+//b. Calculate the number of order proportion options. 
+//convert object keys to array 
+keyOrderData  = Object.keys(orderData);
+let orderProportion = keyOrderData.length;
+console.log("Total number of order proportions = "+orderProportion)
+
+//c. Calculate the percentage of each proportion in below format:
+//toFixed function is used to get number of  digit after decimal
+
+const orderProPer = keyOrderData.map((item, index) => {  
+  return {
+    "id": index + 1,
+    "order": item,
+    "order percentage": ((orderData[item] / totalOrder) * 100).toFixed(2),
+    "restaurant": "Punjabi Tadka"
+  }
+})
+
+console.log(orderProPer);
+
+
+</script>
