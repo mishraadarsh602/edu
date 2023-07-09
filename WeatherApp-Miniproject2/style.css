@@ -3,7 +3,6 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  letter-spacing: 1px;
 }
 
 :root {
@@ -17,14 +16,16 @@
 }
 
 body {
+  letter-spacing: 1px;
+
  
   background-color: #000000;
 background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
 height:100vh;
-overflow:hidden ;
 }
 
 .wrapper {
+  overflow: hidden;
   /* font-size: 19px; */
   /* width: 90vw;
   max-width: 28em; */
@@ -258,10 +259,19 @@ overflow:hidden ;
   
 }
 
+@media  (max-width:991px) {
+ .wrapper{
+  width: 70%;
+  top: 89px;
+ }
+}
 @media  (max-width:575px) {
+  body{
+   height: unset;
+  }
   .wrapper{
     width:90%!important;
-    margin-top: 140px;
+    margin-top:40px;
   }
  .logo{
   top:40px;
