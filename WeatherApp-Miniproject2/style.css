@@ -26,13 +26,14 @@ overflow:hidden ;
 
 .wrapper {
   /* font-size: 19px; */
-  width: 90vw;
-  max-width: 28em;
+  /* width: 90vw;
+  max-width: 28em; */
   position: relative;
-   
+   width:33%;
     margin: 0 auto;
     z-index: 11;
     margin-top: 33px;
+    top: 36px;
   }
 
 .container {
@@ -259,12 +260,12 @@ overflow:hidden ;
 
 @media  (max-width:575px) {
   .wrapper{
-    font-size: 23px;
-    margin-top: 200px;
+    width:90%!important;
+    margin-top: 140px;
   }
  .logo{
-   
-    margin-top:20px;
+  top:40px;
+  left: 28px;
   }
 
 }
