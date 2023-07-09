@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:wght@300;500;600&display=swap">
+    <!-- css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+<div class="logo">
+    <img src="img/logo2.png" height="70px" alt="">
+</div>
+    <div class="wrapper">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="container">
+            <div class="search-container">
+                <form action="" method="" class="form">
+                    <input list="dropdown" placeholder="Enter the Location Name" id="city" name="city" />
+                    <datalist id="dropdown">
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                        <option value="Daman and Diu">Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Lakshadweep">Lakshadweep</option>
+                        <option value="Puducherry">Puducherry</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="West Bengal">West Bengal</option>
+                        <!--cities starts-->
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Lucknow">Lucknow</option>
+                        <option value="Indore">Indore</option>
+                        <option value="Udaipur">Udaipur</option>
+                        <option value="Gurgaon">Gurgaon</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Bhopal">Bhopal</option>
+                        <option value="Shimla">Shimla</option>
+                        <option value="Agartala">Agartala</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Chennai">Chennai</option>
+
+                        <!--cities ends-->
+
+                    </datalist>
+                    <button type="submit" id="search-btn"><img src="img/search.png" height="25px" alt=""></button>
+            </div>
+            <div id="result">
+                <h2>Weather in <span id="location"></span>,<span id="country"></span></h2>
+                <h4 class="weather"></h4>
+                <span id="weatherIcon">
+                    <!--sun icon-->
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="sun"
+                        style="height:70px;margin:0px" version="1.1" id="_x34_" viewBox="0 0 512 512"
+                        xml:space="preserve">
+                        <g>
+                            <g>
+                                <g>
+                                    <path style="fill:#BFB61E;"
+                                        d="M258.373,448.122c-11.783,0-21.337,1.395-21.337,18.136c0,8.131,9.553,45.742,21.337,45.742     c11.784,0,21.336-37.611,21.336-45.742C279.709,449.518,270.156,448.122,258.373,448.122z" />
+                                    <path style="fill:#BFB61E;"
+                                        d="M352.653,422.86c-10.205,5.891-17.78,11.876-9.41,26.374c4.065,7.041,31.144,34.837,41.349,28.945     c10.205-5.892-0.328-43.241-4.393-50.282C371.829,413.4,362.858,416.968,352.653,422.86z" />
+                                    <path style="fill:#BFB61E;"
+                                        d="M448.046,344.432c-14.498-8.37-20.483-0.795-26.375,9.41c-5.892,10.205-9.46,19.176,5.038,27.546     c7.041,4.065,44.39,14.598,50.282,4.393C482.883,375.576,455.087,348.497,448.046,344.432z" />
+                                    <path style="fill:#BFB61E;"
+                                        d="M465.07,238.225c-16.741,0-18.136,9.553-18.136,21.337c0,11.784,1.396,21.336,18.136,21.336     c8.13,0,45.742-9.553,45.742-21.336C510.812,247.777,473.2,238.225,465.07,238.225z" />
+                                    <path style="fill:#BFB61E;"
+                                        d="M426.71,137.735c-14.498,8.37-10.93,17.341-5.038,27.546c5.892,10.204,11.877,17.78,26.375,9.41     c7.041-4.065,34.837-31.144,28.945-41.349C471.099,123.137,433.75,133.67,426.71,137.735z" />
+                                    <path style="fill:#BFB61E;"
+                                        d="M164.092,422.86c-10.205-5.892-19.176-9.46-27.546,5.038c-4.065,7.041-14.598,44.39-4.393,50.282     c10.205,5.892,37.283-21.904,41.349-28.945C181.872,434.737,174.297,428.752,164.092,422.86z" />
+                                    <path style="fill:#BFB61E;"
+                                        d="M424.226,259.561c0-45.799-18.564-87.263-48.577-117.276L141.097,376.837     c30.013,30.013,71.477,48.578,117.276,48.578C349.971,425.415,424.226,351.159,424.226,259.561z" />
+                                </g>
+                                <g>
+                                    <path style="fill:#C6BA56;"
+                                        d="M164.11,96.239c-10.143,5.855-19.05,9.401-27.297-4.618c-0.082-0.083-0.165-0.247-0.248-0.412     c-4.123-7.009-14.596-44.367-4.453-50.305c7.669-4.454,25.07,10.308,34.719,20.781c3.298,3.464,5.69,6.433,6.68,8.164     C181.84,84.364,174.336,90.384,164.11,96.239z" />
+                                    <g>
+                                        <path style="fill:#C6BA56;"
+                                            d="M279.729,52.861v0.577c-0.248,16.164-9.732,17.566-21.359,17.566      c-9.319,0-17.236-0.907-20.122-9.483c-0.824-2.227-1.237-5.113-1.237-8.66c0-5.03,3.629-21.276,9.154-32.987      c3.546-7.257,7.752-12.782,12.205-12.782c1.319,0,2.639,0.495,3.876,1.402C272.225,15.174,279.729,45.604,279.729,52.861z" />
+                                        <path style="fill:#C6BA56;"
+                                            d="M95.085,165.264c-5.938,10.226-11.875,17.813-26.39,9.401      c-3.958-2.227-14.432-11.793-21.854-21.524c-0.082-0.083-0.165-0.165-0.165-0.248c-5.69-7.504-9.484-15.091-6.928-19.545      c5.938-10.226,43.213,0.33,50.305,4.371c1.237,0.742,2.391,1.484,3.381,2.226C103.909,147.699,100.445,155.945,95.085,165.264z" />
+                                        <path style="fill:#C6BA56;"
+                                            d="M69.85,259.524c0,11.546-1.32,21.03-17.236,21.359h-0.907c-7.834,0-43.13-8.907-45.605-20.122      c-0.082,0-0.082,0-0.082,0c0-0.412-0.083-0.824-0.083-1.237c0-4.536,5.69-8.824,13.112-12.205      c11.711-5.525,27.709-9.071,32.657-9.071c4.701,0,8.164,0.742,10.721,2.062C69.108,243.773,69.85,251.113,69.85,259.524z" />
+                                        <path style="fill:#C6BA56;"
+                                            d="M68.7,344.432c-7.041,4.065-34.837,31.144-28.945,41.349c5.892,10.205,43.241-0.328,50.281-4.393      c14.498-8.37,10.93-17.341,5.038-27.546C89.183,343.637,83.197,336.062,68.7,344.432z" />
+                                        <path style="fill:#C6BA56;"
+                                            d="M352.653,96.263c10.205,5.892,19.176,9.46,27.546-5.038c4.065-7.041,14.598-44.39,4.393-50.282      c-10.205-5.892-37.284,21.904-41.349,28.945C334.873,84.386,342.448,90.371,352.653,96.263z" />
+                                        <path style="fill:#C6BA56;"
+                                            d="M258.373,93.708c-91.598,0-165.853,74.255-165.853,165.853      c0,45.799,18.563,87.262,48.577,117.276l234.552-234.552C345.635,112.271,304.172,93.708,258.373,93.708z" />
+                                    </g>
+                                </g>
+                            </g>
+                            <g>
+                                <path style="fill:#EFE748;"
+                                    d="M252.408,440.964c-11.783,0-21.337,1.395-21.337,18.136c0,8.131,9.553,45.742,21.337,45.742    s21.336-37.611,21.336-45.742C273.744,442.36,264.191,440.964,252.408,440.964z" />
+                                <path style="fill:#EFE748;"
+                                    d="M346.688,415.702c-10.205,5.892-17.78,11.877-9.41,26.375c4.065,7.041,31.144,34.837,41.349,28.945    c10.205-5.892-0.328-43.241-4.393-50.282C365.864,406.242,356.893,409.81,346.688,415.702z" />
+                                <path style="fill:#EFE748;"
+                                    d="M442.081,337.274c-14.498-8.37-20.483-0.795-26.375,9.41c-5.892,10.205-9.46,19.176,5.038,27.546    c7.041,4.065,44.39,14.598,50.282,4.393C476.918,368.418,449.122,341.339,442.081,337.274z" />
+                                <path style="fill:#EFE748;"
+                                    d="M459.105,231.066c-16.741,0-18.136,9.553-18.136,21.337c0,11.784,1.395,21.336,18.136,21.336    c8.13,0,45.742-9.553,45.742-21.336C504.846,240.619,467.235,231.066,459.105,231.066z" />
+                                <path style="fill:#EFE748;"
+                                    d="M420.744,130.577c-14.497,8.37-10.93,17.341-5.038,27.546c5.892,10.205,11.877,17.78,26.375,9.41    c7.041-4.065,34.837-31.144,28.945-41.349C465.134,115.979,427.785,126.511,420.744,130.577z" />
+                                <path style="fill:#EFE748;"
+                                    d="M158.127,415.702c-10.205-5.892-19.176-9.46-27.546,5.038c-4.065,7.041-14.598,44.39-4.392,50.282    c10.205,5.892,37.283-21.904,41.349-28.945C175.907,427.578,168.332,421.594,158.127,415.702z" />
+                                <path style="fill:#EFE748;"
+                                    d="M418.261,252.403c0-45.799-18.564-87.263-48.577-117.276L135.132,369.679    c30.014,30.013,71.477,48.578,117.276,48.578C344.006,418.257,418.261,344.001,418.261,252.403z" />
+                            </g>
+                            <g>
+                                <path style="fill:#FAF2AF;"
+                                    d="M158.09,89.065c-7.67,4.453-14.679,7.587-21.277,2.557c-2.144-1.567-4.206-4.041-6.268-7.587    c-4.041-7.01-14.597-44.367-4.371-50.223c9.814-5.69,34.967,19.545,40.657,27.874c0.33,0.412,0.577,0.742,0.742,1.072    C175.903,77.189,168.316,83.209,158.09,89.065z" />
+                                <g>
+                                    <path style="fill:#FAF2AF;"
+                                        d="M273.709,45.687c0,0.577,0,1.155-0.083,1.65c-0.577,15.174-9.814,16.493-21.194,16.493     c-4.288,0-8.247-0.165-11.628-1.237c-0.907-0.247-1.732-0.659-2.556-1.072c-2.722-1.402-4.866-3.711-6.02-7.422     c-0.083-0.083,0-0.083,0-0.083c-0.742-2.227-1.155-5.03-1.155-8.329c0-4.865,3.464-20.452,8.824-32.08     c3.216-7.01,7.175-12.617,11.381-13.442C251.69,0.083,252.02,0,252.432,0c3.547,0,6.927,3.463,9.814,8.494     c0.99,1.649,1.897,3.464,2.804,5.443C270.328,25.482,273.709,40.904,273.709,45.687z" />
+                                    <path style="fill:#FAF2AF;"
+                                        d="M89.147,158.09c-5.937,10.226-11.875,17.813-26.39,9.484c-2.969-1.732-9.648-7.505-15.916-14.432     c-0.082-0.083-0.165-0.165-0.165-0.248c-8.577-9.401-16.246-20.864-12.865-26.719c5.855-10.226,43.213,0.33,50.222,4.371     c5.195,3.051,8.164,6.185,9.401,9.401C95.662,145.637,92.858,151.658,89.147,158.09z" />
+                                    <path style="fill:#FAF2AF;"
+                                        d="M63.83,252.432c0,11.793-1.402,21.277-18.142,21.277H45.44c-5.03-0.083-20.122-3.382-31.503-8.577     c-2.886-1.402-5.608-2.804-7.835-4.371c-0.082,0-0.082,0-0.082,0C2.309,258.205,0,255.401,0,252.432c0-0.33,0-0.742,0.165-1.072     c0.742-4.041,5.69-7.669,12.04-10.886c11.793-5.608,28.451-9.401,33.482-9.401c1.897,0,3.629,0.165,5.196,0.412     c6.762,0.99,9.978,4.288,11.545,8.824c0.412,1.072,0.66,2.309,0.825,3.546C63.748,246.412,63.83,249.381,63.83,252.432z" />
+                                    <path style="fill:#FAF2AF;"
+                                        d="M84.034,374.237c-5.196,3.051-27.379,9.649-40.739,8.576c-1.567-0.083-2.969-0.33-4.288-0.742     c-2.392-0.66-4.206-1.815-5.195-3.464c-0.908-1.567-1.072-3.629-0.577-5.855c2.804-12.206,23.503-32.08,29.523-35.461     c2.969-1.732,5.608-2.804,7.917-3.216c7.917-1.732,12.453,2.969,16.659,9.566c0.577,0.99,1.237,1.979,1.814,3.051     c2.062,3.711,3.959,7.175,4.701,10.556C95.25,363.268,93.353,368.876,84.034,374.237z" />
+                                    <path style="fill:#FAF2AF;"
+                                        d="M346.688,89.104c10.205,5.892,19.176,9.46,27.546-5.038c4.065-7.041,14.598-44.39,4.393-50.282     c-10.205-5.892-37.284,21.904-41.349,28.945C328.908,77.228,336.483,83.213,346.688,89.104z" />
+                                    <path style="fill:#FAF2AF;"
+                                        d="M369.701,135.164l-0.743,0.742l-3.381,3.381L135.164,369.701     c-2.474-2.474-4.783-4.948-7.092-7.587c-6.185-7.009-11.793-14.514-16.741-22.513c-15.668-25.318-24.74-55.171-24.74-87.168     c0-91.621,74.221-165.842,165.842-165.842c29.936,0,58.057,7.917,82.385,21.936C347.6,115.784,359.31,124.773,369.701,135.164z" />
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <!--Rain icon-->
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="rain"
+                        style="height:70px;margin:0px" version="1.1" id="Layer_1" viewBox="0 0 387.991 387.991"
+                        xml:space="preserve">
+                        <g>
+                            <path style="fill:#1EA6C6;"
+                                d="M70.699,92.389c-0.009-0.525-0.02-1.049-0.02-1.575C70.679,40.659,111.338,0,161.493,0   c43.222,0,79.388,30.196,88.562,70.643c8.555-4.789,18.409-7.531,28.91-7.531c32.766,0,59.328,26.562,59.328,59.328   c0,1.339-0.06,2.664-0.148,3.981c24.325,9.03,41.661,32.444,41.661,59.911c0,35.286-28.605,63.892-63.892,63.892H88.051   c-44.108,0-79.865-35.757-79.865-79.865C8.186,132.21,34.935,100.314,70.699,92.389z" />
+                            <g>
+                                <rect x="57.644" y="267.88" style="fill:#96E0DE;" width="15" height="39.746" />
+                                <rect x="57.644" y="323.243" style="fill:#96E0DE;" width="15" height="64.748" />
+                                <rect x="89.855" y="267.88" style="fill:#96E0DE;" width="15" height="120.111" />
+                                <rect x="122.074" y="267.88" style="fill:#96E0DE;" width="15" height="63.807" />
+                                <rect x="122.074" y="346.484" style="fill:#96E0DE;" width="15" height="41.507" />
+                                <rect x="154.285" y="267.88" style="fill:#96E0DE;" width="15" height="120.111" />
+                                <rect x="218.708" y="353.181" style="fill:#96E0DE;" width="15" height="34.81" />
+                                <rect x="218.708" y="267.88" style="fill:#96E0DE;" width="15" height="69.883" />
+                                <rect x="186.497" y="267.88" style="fill:#96E0DE;" width="15" height="25.483" />
+                                <rect x="186.497" y="307.633" style="fill:#96E0DE;" width="15" height="80.358" />
+                                <rect x="250.919" y="267.88" style="fill:#96E0DE;" width="15" height="56.623" />
+                                <rect x="250.919" y="339.381" style="fill:#96E0DE;" width="15" height="48.61" />
+                                <rect x="283.138" y="267.88" style="fill:#96E0DE;" width="15" height="86.465" />
+                                <rect x="283.138" y="368.625" style="fill:#96E0DE;" width="15" height="19.366" />
+                                <rect x="315.349" y="267.88" style="fill:#96E0DE;" width="15" height="120.111" />
+                            </g>
+                        </g>
+                    </svg>
+                    <!--cloud-->
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="cloud"
+                        style="height:70px;margin:0px" version="1.1" id="Layer_1" viewBox="0 0 447.974 447.974"
+                        xml:space="preserve">
+                        <g>
+                            <path style="fill:#1EA6C6;"
+                                d="M62.513,191.264c-0.009-0.525-0.02-1.049-0.02-1.575c0-50.155,40.659-90.814,90.814-90.814   c43.222,0,79.388,30.196,88.562,70.643c8.555-4.789,18.409-7.531,28.91-7.531c32.766,0,59.328,26.562,59.328,59.328   c0,1.339-0.06,2.664-0.148,3.981c24.325,9.03,41.661,32.444,41.661,59.911c0,35.286-28.605,63.892-63.892,63.892H79.865   C35.757,349.099,0,313.341,0,269.234C0,231.085,26.749,199.188,62.513,191.264z" />
+                            <path style="fill:#037893;"
+                                d="M447.974,255.535c0,40.56-32.88,73.44-73.44,73.44h-3.62c8.64-12.43,13.71-27.52,13.71-43.77   c0-28.87-16.41-55.28-41.65-68.34c-2.31-37.82-33.81-67.88-72.19-67.88c-7.04,0-14.03,1.04-20.73,3.04   c-2.67-6.82-6.05-13.35-10.08-19.46c15.22-20.44,39.57-33.69,67.02-33.69c46.12,0,83.51,37.39,83.51,83.51   c0,0.49-0.01,0.97-0.02,1.45C423.374,191.124,447.974,220.454,447.974,255.535z" />
+                        </g>
+                    </svg>
+                    <!--drizzle-->
+                    <svg xmlns="http://www.w3.org/2000/svg" id="drizzle" style="height:70px;margin:0px"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" viewBox="0 0 512 512"
+                        xml:space="preserve">
+                        <path style="fill:#B7E4F8;"
+                            d="M447.475,209.476c0.349-3.327,0.525-6.669,0.525-10.01c0-52.934-43.066-96-96-96  c-5.533,0-11.031,0.472-16.444,1.408c-8.831-20.988-23.043-39.124-41.578-52.929c-22.207-16.538-48.617-25.279-76.378-25.279  c-70.579,0-128,57.421-128,128c0,4.806,0.269,9.608,0.803,14.373c-22.705,3.855-43.566,14.808-59.834,31.63  C10.856,221.053,0,247.901,0,276.266c0,59.992,48.808,108.8,108.8,108.8h313.6c49.405,0,89.6-40.195,89.6-89.6  C512,255.383,485.043,220.48,447.475,209.476z" />
+                        <path style="fill:#93D6F4;"
+                            d="M447.475,209.476c0.349-3.327,0.525-6.669,0.525-10.01c0-52.934-43.066-96-96-96  c-5.533,0-11.031,0.472-16.444,1.408c-8.831-20.988-23.043-39.124-41.578-52.929c-11.639-8.667-24.44-15.171-37.978-19.419v352.54  h166.4c49.405,0,89.6-40.195,89.6-89.6C512,255.383,485.043,220.48,447.475,209.476z" />
+                        <path style="fill:#6FC8F1;"
+                            d="M380.388,307.526c-14.835-20.628-29.481-36.997-30.098-37.683L336,253.919l-14.29,15.924  c-0.616,0.687-15.263,17.056-30.098,37.683c-32.412,45.07-32.412,64.691-32.412,71.14c0,42.348,34.452,76.8,76.8,76.8  s76.8-34.452,76.8-76.8C412.8,372.218,412.8,352.596,380.388,307.526z" />
+                        <path style="fill:#4BBAED;"
+                            d="M336,455.466c42.348,0,76.8-34.452,76.8-76.8c0-6.449,0-26.07-32.412-71.14  c-14.835-20.628-29.481-36.997-30.098-37.683L336,253.919" />
+                        <path style="fill:#6FC8F1;"
+                            d="M210.788,363.511c-11.671-16.229-23.212-29.126-23.698-29.668l-14.29-15.924l-14.29,15.924  c-0.485,0.541-12.027,13.44-23.698,29.668c-11.167,15.528-26.012,38.415-26.012,57.823c0,35.29,28.71,64,64,64s64-28.71,64-64  C236.8,401.926,221.955,379.039,210.788,363.511z" />
+                        <path style="fill:#4BBAED;"
+                            d="M172.8,485.334c35.29,0,64-28.71,64-64c0-19.407-14.845-42.294-26.012-57.821  c-11.671-16.229-23.212-29.126-23.698-29.668l-14.29-15.926" />
+                    </svg>
+                    <!--haze-->
+                    <svg id="haze" style="height:70px;margin:0px" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1"
+                        viewBox="0 0 511.985 511.985" xml:space="preserve">
+                        <path style="fill:#CCD1D9;"
+                            d="M382.66,126.657c-37.28,0-70.872,15.781-94.481,41.03c-12.64-14.577-31.296-23.78-52.092-23.78  c-38.093,0-68.982,30.874-68.982,68.966c0,0.578,0.016,1.156,0.031,1.734c-39.374,7.969-68.998,42.779-68.998,84.506  c0,47.592,38.593,86.215,86.216,86.215h198.307c71.419,0,129.324-57.904,129.324-129.332  C511.984,184.561,454.079,126.657,382.66,126.657z" />
+                        <g>
+                            <path style="fill:#AAB2BC;"
+                                d="M462.813,154.5c17.422,22.03,27.828,49.873,27.828,80.153c0,71.429-57.889,129.331-129.325,129.331   h-198.29c-18.374,0-35.39-5.748-49.373-15.529c15.593,22.279,41.437,36.873,70.7,36.873H382.66   c71.419,0,129.324-57.904,129.324-129.332C511.984,214.842,492.766,178.186,462.813,154.5z" />
+                            <path style="fill:#AAB2BC;"
+                                d="M95.998,257.324H245.32c5.891,0,10.672-4.781,10.672-10.671s-4.781-10.671-10.672-10.671H95.998   c-5.891,0-10.672,4.781-10.672,10.671S90.107,257.324,95.998,257.324z" />
+                        </g>
+                        <path style="fill:#E6E9ED;"
+                            d="M202.65,299.988H10.656C4.765,299.988,0,304.769,0,310.642c0,5.906,4.766,10.688,10.656,10.688  H202.65c5.891,0,10.672-4.781,10.672-10.688C213.322,304.769,208.541,299.988,202.65,299.988z" />
+                        <path style="fill:#AAB2BC;"
+                            d="M191.994,363.984H74.654c-5.891,0-10.656,4.781-10.656,10.656c0,5.906,4.766,10.688,10.656,10.688  h117.34c5.891,0,10.656-4.781,10.656-10.688C202.65,368.765,197.885,363.984,191.994,363.984z" />
+                    </svg>
+                </span>
+                <h4 class="desc"><span id="desc"></span></h4>
+
+                <h1 class="temp"><span id="temp"></span>°</h1>
+
+
+                <div class="temp-container">
+                    <div>
+                        <h6 class="title">Min <span id="tempmin"></span>°</h6>
+                    </div>
+                    <div>
+                        <h6 class="title">Max <span id="tempmax"></span>°</h6>
+                    </div>
+                </div>
+
+                <div class="temp-container hum-container mt-1">
+
+                    <div class="row">
+                        <div class="title humbox col-12 col-md-6">
+                            <img title="Humidity" src="img/humidity.png" height="30px" alt="Humidity">
+                            <div class="inner">
+                                <span>
+                                     <span id="humidity"></span>%
+                                </span>
+                                <span>Humidity</span>
+
+                            </div>
+
+                        </div>
+                        <div class="title humbox col-12 col-md-6">
+                            <img title="Wind Speed" src="img/windspeed.png" height="30px" alt="windspeed">
+                            <div class="inner">
+                                <span>
+                                     <span id="windspeed"></span>m/s
+                                </span>
+                                <span>Wind Speed</span>
+
+                            </div>
+
+                        </div>
+
+
+                       
+
+                    </div>
+
+                </div>
+                <br><br>
+
+                <p class="text-light" id="date"></p>
+
+            </div>
+        </div>
+    </div>
+    
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h6 class="text-light">Please enter the corect location name</h6>
+          <h6 class="text-light">Ex : country, state, city name etc..</h6>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary"   data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
