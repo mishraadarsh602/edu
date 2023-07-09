@@ -266,6 +266,7 @@ height:100vh;
  }
 }
 @media  (max-width:575px) {
+  
   body{
    height: unset;
   }
@@ -275,7 +276,17 @@ height:100vh;
   }
  .logo{
   top:40px;
-  left: 28px;
+  left: 17%;
   }
-
+  .humbox img {
+    height: 38px;
+    margin-right: 7px!important;
+}
+.inner span:nth-child(1) {
+ 
+  font-size: 20px;
+}.humbox .inner {
+  padding: 0;
+  padding-right: 25px;
+}
 }
